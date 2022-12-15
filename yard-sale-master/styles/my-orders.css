@@ -1,0 +1,194 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #232830;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --large: 1.9rem;
+  --medium: 1.7rem;
+  --short: 1.6rem;
+  --very-short: 1.4rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  background: var(--white);
+  color: var(--black);
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.navbar-list {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 130px;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Navbar styles in desktop */
+.categories-list {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+  font-size: var(--medium);
+}
+.categories-list li a {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--very-light-pink);
+  text-decoration: none;
+}
+
+/* Active category style*/
+.categories-list li a:hover {
+  border-color: var(--hospital-green);
+  color: var(--hospital-green);
+}
+/*  */
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__right a {
+  color: var(--dark);
+  font-size: var(--very-short);
+  text-decoration: none;
+}
+
+.menu-account {
+  display: none;
+  margin-right: 24px;
+}
+.menu-account span:nth-child(1) {
+  padding-right: 4px;
+}
+.down-arrow {
+  width: 8px;
+  height: 8px;
+  content: url("../images/flechita.svg");
+  transform: rotate(90deg);
+}
+.shopping-icon {
+  width: 27px;
+  height: 28px;
+}
+
+.main-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 0 20px;
+}
+
+h1 {
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+  margin-top: 80px;
+  margin-bottom: 32px;
+  padding-left: 8px;
+  font-size: var(--large);
+  text-align: start;
+}
+.general-info {
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: var(--large);
+  font-weight: bold;
+  color: var(--black);
+  text-decoration: none;
+}
+.general-info__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date {
+  margin-bottom: 4px;
+}
+
+.info {
+  color: grey;
+  font-size: var(--medium);
+  font-weight: 500;
+}
+.price {
+  color: var(--dark);
+  font-size: var(--large);
+  font-weight: bold;
+}
+
+.right-arrow {
+  content: url("../images/flechita.svg");
+  width: 8px;
+  margin-left: 20px;
+}
+
+/* NavBar mobile to desktop styles */
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 150px;
+  }
+  .menu-mobile {
+    display: none;
+  }
+  .categories-list {
+    display: flex;
+  }
+  .menu-account {
+    display: block;
+  }
+
+  .navbar__left {
+    order: 1;
+  }
+  .navbar__right {
+    order: 2;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .categories-list {
+    margin-left: 52px;
+  }
+  .categories-list li a {
+    padding: 8px 16px;
+  }
+}

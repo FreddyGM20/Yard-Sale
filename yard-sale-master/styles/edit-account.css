@@ -1,0 +1,197 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #232830;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --large: 1.9rem;
+  --medium: 1.7rem;
+  --short: 1.6rem;
+  --very-short: 1.4rem;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  background: var(--white);
+  color: var(--black);
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.navbar-list {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 130px;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Navbar styles in desktop */
+.categories-list {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+  font-size: var(--medium);
+}
+.categories-list li a {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--very-light-pink);
+  text-decoration: none;
+}
+
+/* Active category style*/
+.categories-list li a:hover {
+  border-color: var(--hospital-green);
+  color: var(--hospital-green);
+}
+/*  */
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__right a {
+  color: var(--dark);
+  font-size: var(--very-short);
+  text-decoration: none;
+}
+
+.menu-account {
+  display: none;
+  margin-right: 24px;
+}
+.menu-account span:nth-child(1) {
+  padding-right: 4px;
+}
+.down-arrow {
+  width: 8px;
+  height: 8px;
+  content: url("../images/flechita.svg");
+  transform: rotate(90deg);
+}
+.shopping-icon {
+  width: 27px;
+  height: 28px;
+}
+
+.login {
+  width: 100%;
+  min-width: 300px;
+  max-width: 370px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  position: relative;
+}
+.title {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  color: var(--black);
+  font-size: var(--large);
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.login__label {
+  margin-bottom: 12px;
+  font-size: var(--medium);
+  font-weight: bolder;
+}
+.login__input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--text-input-field);
+  color: var(--very-light-pink);
+  font-size: var(--medium);
+  font-weight: 300;
+  outline: none;
+}
+.button {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  font-size: var(--large);
+  font-weight: 500;
+}
+.login__button {
+  width: 100%;
+  margin-top: 20px;
+  background: var(--hospital-green);
+  color: var(--white);
+}
+/* Hover states */
+.login__button:hover {
+  cursor: pointer;
+  background: rgba(172, 217, 178, 0.8);
+}
+
+/* NavBar mobile to desktop styles */
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 150px;
+  }
+  .menu-mobile {
+    display: none;
+  }
+  .categories-list {
+    display: flex;
+  }
+  .menu-account {
+    display: block;
+  }
+
+  .navbar__left {
+    order: 1;
+  }
+  .navbar__right {
+    order: 2;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .categories-list {
+    margin-left: 52px;
+  }
+  .categories-list li a {
+    padding: 8px 16px;
+  }
+}
